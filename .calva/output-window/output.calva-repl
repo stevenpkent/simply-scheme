@@ -1,0 +1,745 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.8.3"},cider/cider-nrepl {:mvn/version,"0.25.8"}}}'  -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+; Evaluating file: ss_06_helper.clj
+#'skent.ss-06-helper/roman-value
+clj꞉skent.ss-06-helper꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman->arabic
+clj꞉skent.ss-06꞉> 
+(roman->arabic '(c x l i v))
+(100 10 50 1 5)
+(110 50 4)
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06_helper.clj
+#'skent.ss-06-helper/roman-value
+clj꞉skent.ss-06-helper꞉> 
+(roman->arabic '(c x l i v))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:34:1).
+; Unable to resolve symbol: roman->arabic in this context
+clj꞉skent.ss-06-helper꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman->arabic
+clj꞉skent.ss-06꞉> 
+(roman->arabic '(c x l i v))
+(100 10 50 1 5)
+[(100 10) (50) (1 5)]
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06_helper.clj
+#'skent.ss-06-helper/roman-value
+clj꞉skent.ss-06-helper꞉> 
+(map roman-value "MMMM")
+; Error printing return value (ClassCastException) at skent.ss-06-helper/roman-value (ss_06_helper.clj:21).
+; java.lang.Character cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06-helper꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman->arabic
+clj꞉skent.ss-06꞉> 
+(roman->arabic "CXXXI")
+; Execution error (ClassCastException) at skent.ss-06-helper/roman-value (ss_06_helper.clj:21).
+; java.lang.Character cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06_helper.clj
+#'skent.ss-06-helper/decimal-value
+clj꞉skent.ss-06-helper꞉> 
+(decimal-value "CXXXI")
+(100 10 10 10 1)
+clj꞉skent.ss-06-helper꞉> 
+; Evaluating file: ss_06_helper.clj
+#'skent.ss-06-helper/decimal-value
+clj꞉skent.ss-06-helper꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman->arabic
+clj꞉skent.ss-06꞉> 
+(roman->arabic "CXXXI")
+(100 10 10 10 1)
+131
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman->decimal
+clj꞉skent.ss-06꞉> 
+(roman->decimal "CXXXI")
+(100 10 10 10 1)
+131
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman->decimal
+clj꞉skent.ss-06꞉> 
+(roman->decimal "CXXXI")
+(100 10 10 10 1)
+nil
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman->decimal
+clj꞉skent.ss-06꞉> 
+(roman->decimal "CXXXI")
+131
+clj꞉skent.ss-06꞉> 
+(roman->decimal "MCXVII")
+1117
+clj꞉skent.ss-06꞉> 
+(partition-all 2 '(1 2 3 4 5 6))
+((1 2) (3 4) (5 6))
+clj꞉skent.ss-06꞉> 
+(partition-all 2 '(1 2 3 4 5 6 7))
+((1 2) (3 4) (5 6) (7))
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/rome-to-int
+clj꞉skent.ss-06꞉> 
+(rome-to-int "CXLIV")
+; Execution error (IllegalArgumentException) at skent.ss-06/r2i (ss_06.clj:52).
+; No matching clause: \V
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/rome-to-int
+clj꞉skent.ss-06꞉> 
+(rome-to-int "CXLIV")
+166
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+144
+clj꞉skent.ss-06꞉> 
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+144
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+144
+clj꞉skent.ss-06꞉> 
+clj꞉skent.ss-06꞉> 
+#'skent.ss-06/add-numeral
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+144
+clj꞉skent.ss-06꞉> 
+(roman "IV")
+4
+clj꞉skent.ss-06꞉> 
+(roman "IX")
+9
+clj꞉skent.ss-06꞉> 
+(roman "MMMCMXCIX")
+3999
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "MMMCMXCIX")
+3999
+clj꞉skent.ss-06꞉> 
+#'skent.ss-06/add-numeral
+clj꞉skent.ss-06꞉> 
+(roman "MMMCMXCIX")
+3999
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "M")
+; Error printing return value (ClassCastException) at clojure.core/map$fn (core.clj:2759).
+; java.lang.String cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "M")
+(1000)
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "M")
+1000
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "M")
+; Execution error (ClassCastException) at skent.ss-06/roman (ss_06.clj:55).
+; java.lang.String cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06꞉> 
+(get \L {\I 1 \X 10 \L 50})
+nil
+clj꞉skent.ss-06꞉> 
+(get "L" {\I 1 \X 10 \L 50})
+nil
+clj꞉skent.ss-06꞉> 
+("L" {\I 1 \X 10 \L 50})
+; Execution error (ClassCastException) at skent.ss-06/eval7722 (REPL:195).
+; java.lang.String cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "M")
+nil
+clj꞉skent.ss-06꞉> 
+( {\I 1 \X 10 \L 50} "L")
+nil
+clj꞉skent.ss-06꞉> 
+( {\I 1 \X 10 \L 50} \L)
+50
+clj꞉skent.ss-06꞉> 
+(roman \X)
+10
+clj꞉skent.ss-06꞉> 
+(partition 3 '(1 2 3 4 5 6 7 8 9))
+((1 2 3) (4 5 6) (7 8 9))
+clj꞉skent.ss-06꞉> 
+(partition 3 1 '(1 2 3 4 5 6 7 8 9))
+((1 2 3) (2 3 4) (3 4 5) (4 5 6) (5 6 7) (6 7 8) (7 8 9))
+clj꞉skent.ss-06꞉> 
+(partition-all '(1 2 3 4 5 6 7 8 9))
+; Execution error (ClassCastException) at skent.ss-06/eval7766 (REPL:220).
+; clojure.lang.PersistentList cannot be cast to java.lang.Number
+clj꞉skent.ss-06꞉> 
+(partition-all 3 '(1 2 3 4 5 6 7 8 9))
+((1 2 3) (4 5 6) (7 8 9))
+clj꞉skent.ss-06꞉> 
+(partition-by #(> & 4) '(1 2 3 4 5 6 7 8 9))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:227:16).
+; Unable to resolve symbol: & in this context
+clj꞉skent.ss-06꞉> 
+(partition-by #(> % 4) '(1 2 3 4 5 6 7 8 9))
+((1 2 3 4) (5 6 7 8 9))
+clj꞉skent.ss-06꞉> 
+(ro)
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman-numeral->decimal
+clj꞉skent.ss-06꞉> 
+(\I roman-numeral->decimal)
+; Execution error (ClassCastException) at skent.ss-06/eval7808 (REPL:238).
+; java.lang.Character cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06꞉> 
+(roman-numeral->decimal \I)
+1
+clj꞉skent.ss-06꞉> 
+(map #(roman-numeral->decimal %) "MDCLXVI")
+(1000 500 100 50 10 5 1)
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+; Syntax error reading source at (src/skent/ss_06.clj:56:1).
+; EOF while reading, starting at line 54
+; Evaluation of file ss_06.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉skent.ss-06꞉> 
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+; Syntax error reading source at (src/skent/ss_06.clj:56:1).
+; EOF while reading, starting at line 54
+; Evaluation of file ss_06.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉skent.ss-06꞉> 
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "MDCLXVI")
+(1000 500 100 50 10 5 1)
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+((100 10) (10 50) (50 1) (1 5))
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+((10 50) (1 5))
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+(((100 10)) ((10 50)) ((50 1)) ((1 5)))
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+"hi"
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+"hi"
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+"hi"
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+"hi"
+clj꞉skent.ss-06꞉> 
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+"hi"
+clj꞉skent.ss-06꞉> 
+(def a '(100 10 50 1 5))
+#'skent.ss-06/a
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(def b '(10 50 1 5))
+#'skent.ss-06/b
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(clojure.set/difference a b)
+; Execution error (ClassCastException) at skent.ss-06/eval8496 (REPL:329).
+; clojure.lang.PersistentList cannot be cast to clojure.lang.IPersistentSet
+clj꞉skent.ss-06꞉> 
+(clojure.set/intersection a b)
+; Execution error (IllegalArgumentException) at skent.ss-06/eval8498 (REPL:333).
+; contains? not supported on type: clojure.lang.PersistentList
+clj꞉skent.ss-06꞉> 
+(remove b a)
+; Error printing return value (ClassCastException) at clojure.core/complement$fn (core.clj:1443).
+; clojure.lang.PersistentList cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06꞉> 
+(remove (set b) a)
+(100)
+clj꞉skent.ss-06꞉> 
+(def c '(100 10 10 50 50 1 1 5 5))
+#'skent.ss-06/c
+clj꞉skent.ss-06꞉> 
+(remove (set b) c)
+(100)
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(drop-while )
+; Evaluating file: ss_06.clj
+#'skent.ss-06/drop-while-test
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(drop-while-test a b)
+10
+(nil50
+ nil1
+ nil5
+ nil)
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/drop-while-test
+clj꞉skent.ss-06꞉> 
+(drop-while-test a b)
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (3) passed to: clojure.core/drop-while
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/drop-while-test
+clj꞉skent.ss-06꞉> 
+(drop-while-test a b)
+; Error printing return value (ClassCastException) at skent.ss-06/drop-while-test$fn (ss_06.clj:66).
+; clojure.lang.LazySeq cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/drop-while-test
+clj꞉skent.ss-06꞉> 
+(drop-while-test a b)
+; Error printing return value (ClassCastException) at skent.ss-06/drop-while-test$fn (ss_06.clj:66).
+; java.lang.Long cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/drop-while-test
+clj꞉skent.ss-06꞉> 
+(drop-while-test a b)
+10
+(nil50
+ nil1
+ nil5
+ nil)
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+; Syntax error compiling at (src/skent/ss_06.clj:66:9).
+; Can't take value of a macro: #'clojure.core/fn
+; Evaluation of file ss_06.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉skent.ss-06꞉> 
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+; Syntax error compiling at (src/skent/ss_06.clj:66:9).
+; Can't take value of a macro: #'clojure.core/fn
+; Evaluation of file ss_06.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉skent.ss-06꞉> 
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/drop-while-test-2
+clj꞉skent.ss-06꞉> 
+(drop-while-test-2 a b)
+#'skent.ss-06/drop-while-test-2
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(drop-while-test-2 superset subset)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:439:1).
+; Unable to resolve symbol: superset in this context
+clj꞉skent.ss-06꞉> 
+(drop-while-test-2 a b)
+; Execution error (ArityException) at cider.nrepl.middleware.debug/pr-short (debug.clj:190).
+; Wrong number of args (1) passed to: skent.ss-06/eval8860/drop-while-test-2--8861/fn--8862/fn--8863
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+"hi"
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+bb
+; Syntax error compiling at (.calva/output-window/output.calva-repl:0:0).
+; Unable to resolve symbol: bb in this context
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(partition (count b) a)
+((100 10 50 1))
+clj꞉skent.ss-06꞉> 
+(partition (count b) 1 a)
+((100 10 50 1) (10 50 1 5))
+clj꞉skent.ss-06꞉> 
+(distinct a b)
+; Execution error (ArityException) at skent.ss-06/eval8889 (REPL:469).
+; Wrong number of args (2) passed to: clojure.core/distinct
+clj꞉skent.ss-06꞉> 
+(flatten a b)
+; Execution error (ArityException) at skent.ss-06/eval8891 (REPL:473).
+; Wrong number of args (2) passed to: clojure.core/flatten
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(merge a b)
+((10 50 1 5) 100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(def c (flatten (merge a b)))
+#'skent.ss-06/c
+clj꞉skent.ss-06꞉> 
+c
+(10 50 1 5 100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(set c)
+#{1 50 100 5 10}
+clj꞉skent.ss-06꞉> 
+(distinct c)
+(10 50 1 5 100)
+clj꞉skent.ss-06꞉> 
+c
+(10 50 1 5 100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(frequencies c)
+{10 2, 50 2, 1 2, 5 2, 100 1}
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/drop-while-test-2
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(drop-while-test-2 a b)
+((10 50 1 5) 100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(remove a 5)
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉skent.ss-06꞉> 
+(remove 5 a)
+; Error printing return value (ClassCastException) at clojure.core/complement$fn (core.clj:1443).
+; java.lang.Long cannot be cast to clojure.lang.IFn
+clj꞉skent.ss-06꞉> 
+(remove #(= 5) a)
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (1) passed to: skent.ss-06/eval8944/fn--8945
+clj꞉skent.ss-06꞉> 
+(remove a #(= 5))
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: skent.ss_06$eval8948$fn__8949
+clj꞉skent.ss-06꞉> 
+(interleave a b)
+(100 10 10 50 50 1 1 5)
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+bb
+; Syntax error compiling at (.calva/output-window/output.calva-repl:0:0).
+; Unable to resolve symbol: bb in this context
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(concat a b)
+(100 10 50 1 5 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(some #(= 5) b)
+; Execution error (ArityException) at skent.ss-06/eval8956 (REPL:554).
+; Wrong number of args (1) passed to: skent.ss-06/eval8956/fn--8957
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(some #(= 5 %) b)
+true
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+b
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(def d (map #(remove #(contains? %1 %2) a) b))
+; Syntax error reading source at (REPL:570:24).
+; Nested #()s are not allowed
+clj꞉skent.ss-06꞉> 
+(def d (map #(remove fn [_a _b](contains? _a _b) a) b))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:574:14).
+; Can't take value of a macro: #'clojure.core/fn
+clj꞉skent.ss-06꞉> 
+(def d (map #(remove fn [isa isb](contains? isa isb) a) b))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:578:14).
+; Can't take value of a macro: #'clojure.core/fn
+clj꞉skent.ss-06꞉> 
+(def d (map #(remove (fn [isa isb](contains? isa isb)) a) b))
+#'skent.ss-06/d
+clj꞉skent.ss-06꞉> 
+d
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (1) passed to: skent.ss-06/fn--8978
+clj꞉skent.ss-06꞉> 
+(contains? a 10)
+; Execution error (IllegalArgumentException) at skent.ss-06/eval8982 (REPL:589).
+; contains? not supported on type: clojure.lang.PersistentList
+clj꞉skent.ss-06꞉> 
+(.indexOf 50 b)
+; Execution error (IllegalArgumentException) at skent.ss-06/eval8984 (REPL:593).
+; No matching method indexOf found taking 1 args for class java.lang.Long
+clj꞉skent.ss-06꞉> 
+a
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(drop-while #(= 50) a)
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (1) passed to: skent.ss-06/eval8986/fn--8987
+clj꞉skent.ss-06꞉> 
+(drop-while #(= 50 %) a)
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+"hi"
+clj꞉skent.ss-06꞉> 
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+"hi"
+clj꞉skent.ss-06꞉> 
+(def a [100 10 50 1 5])
+#'skent.ss-06/a
+clj꞉skent.ss-06꞉> 
+a
+[100 10 50 1 5]
+clj꞉skent.ss-06꞉> 
+(def b [10 50 1 5])
+#'skent.ss-06/b
+clj꞉skent.ss-06꞉> 
+b
+[10 50 1 5]
+clj꞉skent.ss-06꞉> 
+(subvec a 0)
+[100 10 50 1 5]
+clj꞉skent.ss-06꞉> 
+(subvec a 1)
+[10 50 1 5]
+clj꞉skent.ss-06꞉> 
+(filter #(= 50 %) a)
+(50)
+clj꞉skent.ss-06꞉> 
+(frequencies a)
+{100 1, 10 1, 50 1, 1 1, 5 1}
+clj꞉skent.ss-06꞉> 
+(frequencies b)
+{10 1, 50 1, 1 1, 5 1}
+clj꞉skent.ss-06꞉> 
+(keys (frequencies a))
+(100 10 50 1 5)
+clj꞉skent.ss-06꞉> 
+(keys (frequencies b))
+(10 50 1 5)
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+"hi"
+clj꞉skent.ss-06꞉> 
+(roman "IX")
+"hi"
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "IX")
+9
+clj꞉skent.ss-06꞉> 
+(roman "VIII")
+0
+clj꞉skent.ss-06꞉> 
+(apply >= '(50 10 5 1))
+true
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "VIII")
+8
+clj꞉skent.ss-06꞉> 
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "VIII")
+8
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+44
+clj꞉skent.ss-06꞉> 
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+44
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+44
+clj꞉skent.ss-06꞉> 
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+44
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+144
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+144
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+144
+clj꞉skent.ss-06꞉> 
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+144
+clj꞉skent.ss-06꞉> 
+(roman "CCXXXIX")
+239
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXCIV")
+194
+clj꞉skent.ss-06꞉> 
+; Evaluating file: ss_06.clj
+#'skent.ss-06/roman
+clj꞉skent.ss-06꞉> 
+(roman "CXCIV")
+194
+clj꞉skent.ss-06꞉> 
+(roman "CCXXXIX")
+239
+clj꞉skent.ss-06꞉> 
+(roman "CXLIV")
+144
+clj꞉skent.ss-06꞉> 
+; nREPL Connection was closed
