@@ -11,3 +11,4 @@
 .hg/
 
 **/output.calva-repl
+.DS_Store
