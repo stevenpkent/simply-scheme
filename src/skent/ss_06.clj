@@ -1,5 +1,6 @@
 (ns skent.ss-06
-  (:require [skent.ss-02 :as sk]))
+  (:require [skent.ss-02 :as sk]
+            [clojure.string :as str]))
 
 (defn greet
   [name]
@@ -45,8 +46,7 @@
         contains-seven?   (string-contains? (str num) re)]
     (if (or divides-evenly? contains-seven?) 'buzz num))) 
 
-;; when
-
+;; example from page 78
 (defn gotta-be-special-don't-you?
   [decimal-list]
   (let [parted (partition 2 1 decimal-list)
@@ -56,10 +56,30 @@
         literal-sum-all (apply + decimal-list)]
     (+ (- literal-sum-all literal-sum-unordered) roman-sum-unordered)))
 
+;; example from page 78
 (defn roman
   [s]
   (let [decimal-list (map #({\I 1, \V 5, \X 10, \L 50, \C 100, \D 500, \M 1000} %) s)]
     (if (apply >= decimal-list)
       (apply + decimal-list)
       (gotta-be-special-don't-you? decimal-list))))
+
+(defn european-time
+;; exercise 6.5
+  [s]
+  (let [[n am-pm] (str/split s #" ")
+        number (Integer/parseInt n)
+        is-12 (= number 12)]
+    (if (= am-pm "AM")
+      (if is-12 (+ number 12) number)
+      (if is-12 number (+ number 12)))))
+
+;; exercise 6.5
+(defn american-time
+  [n]
+  (cond
+    (= n 24) "12 AM"
+    (< n 12) (str n " AM")
+    (= n 12) (str n " PM")
+    :else (str (- n 12) " PM")))
 
