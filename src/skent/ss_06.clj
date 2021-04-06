@@ -53,7 +53,7 @@
         filtered (filter #(apply < %) parted)
         roman-sum-unordered (apply + (map #(Math/abs (apply - %)) filtered))
         literal-sum-unordered (apply + (flatten filtered))
-        literal-sum-all (apply +  decimal-list)]
+        literal-sum-all (apply + decimal-list)]
     (+ (- literal-sum-all literal-sum-unordered) roman-sum-unordered)))
 
 (defn roman
