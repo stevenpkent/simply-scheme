@@ -64,8 +64,8 @@
       (apply + decimal-list)
       (gotta-be-special-don't-you? decimal-list))))
 
-(defn european-time
 ;; exercise 6.5
+(defn european-time
   [s]
   (let [[n am-pm] (str/split s #" ")
         number (Integer/parseInt n)
