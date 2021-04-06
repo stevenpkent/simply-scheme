@@ -1,6 +1,5 @@
 (ns skent.ss-06
-  (:require [skent.ss-02 :as sk]
-            [clojure.set :as clj-set]))
+  (:require [skent.ss-02 :as sk]))
 
 (defn greet
   [name]
@@ -48,11 +47,11 @@
 
 ;; when
 
-(defn gotta-be-special-dont-you
+(defn gotta-be-special-don't-you?
   [decimal-list]
   (let [parted (partition 2 1 decimal-list)
-        filtered (filter #(< (first %) (last %)) parted)
-        roman-sum-unordered (apply + (map #(Math/abs (- (first %) (last %))) filtered))
+        filtered (filter #(apply < %) parted)
+        roman-sum-unordered (apply + (map #(Math/abs (apply - %)) filtered))
         literal-sum-unordered (apply + (flatten filtered))
         literal-sum-all (apply +  decimal-list)]
     (+ (- literal-sum-all literal-sum-unordered) roman-sum-unordered)))
@@ -62,5 +61,5 @@
   (let [decimal-list (map #({\I 1, \V 5, \X 10, \L 50, \C 100, \D 500, \M 1000} %) s)]
     (if (apply >= decimal-list)
       (apply + decimal-list)
-      (gotta-be-special-dont-you decimal-list))))
+      (gotta-be-special-don't-you? decimal-list))))
 
