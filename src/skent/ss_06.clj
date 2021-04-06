@@ -105,4 +105,11 @@
   (let [f (first (str s))]
     (if (sk1/vowel? f) (str "an " s) (str "a " s))))
 
+;; exercise 6.9
+(defn this-many
+  [n s]
+  (if (> n 1)
+    (str n " " (str s "s"))
+    (str n " " s)))
+
 
