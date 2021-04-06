@@ -83,3 +83,8 @@
     (= n 12) (str n " PM")
     :else (str (- n 12) " PM")))
 
+;; exercise 6.6
+(defn teen?
+  [age]
+  (< 12 age 20))
+
