@@ -112,4 +112,8 @@
     (str n " " (str s "s"))
     (str n " " s)))
 
+;; exercise 6.10
+(defn sort2 
+  [sentence]
+  (sort sentence))
 
