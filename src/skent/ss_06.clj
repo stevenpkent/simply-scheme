@@ -88,3 +88,13 @@
   [age]
   (< 12 age 20))
 
+;; exercise 6.7
+(defn type-of
+  [x]
+  (let [t (type x)]
+  (cond
+    (= t clojure.lang.Symbol) 'WORD
+    (= t clojure.lang.PersistentList) 'SENTENCE
+    (= t java.lang.Boolean) 'BOOLEAN
+    :else t)))
+
