@@ -1,6 +1,7 @@
 (ns skent.ss-06
   (:require [skent.ss-02 :as sk]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [skent.ss-01 :as sk1]))
 
 (defn greet
   [name]
@@ -97,4 +98,11 @@
     (= t clojure.lang.PersistentList) 'SENTENCE
     (= t java.lang.Boolean) 'BOOLEAN
     :else t)))
+
+;; exercise 6.8
+(defn indefinite-article
+  [s]
+  (let [f (first (str s))]
+    (if (sk1/vowel? f) (str "an " s) (str "a " s))))
+
 
