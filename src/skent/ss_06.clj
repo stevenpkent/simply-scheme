@@ -114,6 +114,30 @@
 
 ;; exercise 6.10
 (defn sort2 
-  [sentence]
-  (sort sentence))
+  [ns]
+  (sort ns))
+
+;; exercise 6.11
+(defn handle-feb
+  [y]
+  (let [even-4 (= (mod y 4) 0)
+        even-100 (= (mod y 100) 0)
+        even-400 (= (mod y 400) 0)]
+    (cond
+      (and even-4 (not even-100)) 29
+      (and even-4 even-400) 29
+      :else 28)))
+
+(defn max-day
+ [m y] 
+  (cond
+    (contains? #{1 3 5 7 8 10} m) 31
+    (contains? #{4 6 9 11} m) 30
+    :else (handle-feb y)))
+
+(defn valid-date? 
+  [m d y]
+  (every? true? [(every? #(> % 0) [m d y]) 
+                 (<= m 12) 
+                 (<= d (max-day m y))]))
 
