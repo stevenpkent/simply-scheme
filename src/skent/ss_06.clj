@@ -141,3 +141,14 @@
                  (<= m 12) 
                  (<= d (max-day m y))]))
 
+;; exercise 6.14
+(defn describe-time
+  [seconds]
+  {:seconds seconds 
+   :minutes (/ seconds 60.0) 
+   :hours (/ seconds 3600.0) 
+   :days (/ seconds (* 24.0 3600)) 
+   :years (/ seconds (* 24.0 3600 365)) 
+   :decades (/ seconds (* 24.0 3600 365 10)) 
+   :centuries (/ seconds (* 24.0 3600 365 10 10))})
+
