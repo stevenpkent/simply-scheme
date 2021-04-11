@@ -86,7 +86,9 @@
 ;; exercise 5.21
 (defn query
   [sent]
-  (let [a (reverse (take 2 sent))
-        b (take-last (- (count sent) 2) sent)
-        c (list '?)] 
-  (-> '(a b c) flatten))
+  (->>
+   (flatten 
+    (list 
+     (reverse (take 2 sent)) 
+     (str (last sent) "?")))
+   (str/join " ")))
