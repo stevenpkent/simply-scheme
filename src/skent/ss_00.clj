@@ -1,8 +1,6 @@
-(ns skent.ss-00
-  (:gen-class))
+(ns skent.ss-00)
+
+(def the-beatles #{"john" "paul" "george" "ringo"})
 
 (defn beatle? [name]
-  (contains? #{"john" "paul" "george" "ringo"} name))
-
-(defn but-first [input]
-  (-> (reverse input) (butlast) (reverse)))
+  (contains? the-beatles name))

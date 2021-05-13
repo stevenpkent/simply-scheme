@@ -1,30 +1,42 @@
 (ns skent.ss-01
   (:require [clojure.string :as str]))
 
-(defn keep-word?
-  [wrd]
-  (not (contains? #{"a" "the" "an" "in" "of" "and" "for" "to" "with"} wrd)))
+;; page 6
+(defn word
+  [& args]
+  (apply str args))
+
+;; page 8
+(def words-to-ignore #{"a" "the" "an" "in" "of" "and" "for" "to" "with"})
+
+(defn ignore-word?
+  [word]
+  (contains? words-to-ignore word))
+
+(def real-word? (complement ignore-word?))
 
 (defn acronym
   [phrase]
-  (as-> phrase V
-        (str/split V #" ")
-        (filter keep-word? V)
-        (map first V)
-        (map str/upper-case V)
-        (str/join "" V)))
+  (->> (str/split phrase #" ")
+       (filter real-word?)
+       (map first)
+       (map str/upper-case)
+       (str/join)))
+
+;; STOPPED AT PAGE 10
 
 (defn vowel?
   [letter]
   (contains? #{\a \e \i \o \u} letter))
 
-(defn word
-  [& args]
-  (apply str args))
+
 
 (defn but-first
-  [input]
-  (-> (reverse input) (butlast) (reverse) (str/join)))
+  [thing]
+  (let [x (seq thing)]
+    (if (= (class thing) String)
+      (str/join (drop 1 x))
+      (drop 1 x))))
 
 (defn rotate
   [wrd]
